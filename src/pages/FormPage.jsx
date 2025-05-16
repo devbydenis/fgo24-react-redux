@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import ilustrationImage from "../assets/undraw_form.svg";
 import {MdCloudDone} from "react-icons/md";
 import Input from "../components/Input";
@@ -6,6 +6,15 @@ import { useForm } from "react-hook-form";
 
 function FormPage() {
   const { register, handleSubmit } = useForm();
+  const Navigate = useNavigate();
+  
+  const onSubmit = (data) => {
+    const existingData = JSON.parse(localStorage.getItem("form")) || [];
+    
+    localStorage.setItem("form", JSON.stringify([...existingData, data]));
+    Navigate("/result");
+  };
+
 
   return (
     <main className="flex justify-center my-10">
@@ -15,9 +24,9 @@ function FormPage() {
         {/* Description */}
         <DescriptionCard />
         {/* Question card */}
-        <form className="w-full">
+        <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
           <Input
-            name={"id"}
+            {...register("id")}
             type={"text"}
             label={"ID"}
             required={true}
@@ -27,7 +36,7 @@ function FormPage() {
             }
           />
           <Input
-            name={"name"}
+            {...register("name")}
             type={"text"}
             label={"Name"}
             required={true}
@@ -35,6 +44,7 @@ function FormPage() {
           />
           <Input
             name={"location"}
+            register={register}
             type={"radio"}
             label={"Location"}
             values={["Offline", "Online"]}
@@ -42,6 +52,7 @@ function FormPage() {
           />
           <Input 
             name={"feedback"}
+            register={register}
             type={"checkbox"}
             label={"Feedback"}
             values={[
@@ -62,6 +73,7 @@ function FormPage() {
         Result
       </Link>
       </section>
+
     </main>
   );
 }
