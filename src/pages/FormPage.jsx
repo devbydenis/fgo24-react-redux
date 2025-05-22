@@ -29,7 +29,7 @@ function FormPage() {
         <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
           <Input
             {...register("id")}
-            type={"text"}
+            type={"number"}
             label={"ID"}
             required={true}
             placeholder={"Jawaban Kamu"}
