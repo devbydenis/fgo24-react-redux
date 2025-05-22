@@ -1,4 +1,4 @@
-# FGO24 React Form
+# FGO24 React Redux
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
@@ -7,7 +7,7 @@
 
 ## Description
 
-This project is a basic React application scaffolded with Vite, styled using Tailwind CSS, and powered by a Node.js environment. It is developed as part of the FGO24 (Full-stack Golang 2024) bootcamp to demonstrate react-hook-form & react-router-dom by building a google form clone
+This project is a basic React application scaffolded with Vite, styled using Tailwind CSS, and powered by a Node.js environment. It is developed as part of the FGO24 (Full-stack Golang 2024) bootcamp to demonstrate redux in react works by building a google form clone
 
 ## ✨ Features
 
@@ -20,6 +20,8 @@ This project is a basic React application scaffolded with Vite, styled using Tai
 ## 🛠️ Technologies Used
 
 - React
+- Redux
+- React Hook Form 
 - Tailwind CSS (soon)
 - Node.js
 - Vite
@@ -37,8 +39,8 @@ Before running this project, ensure you have:
 ### Cloning the Repository
 
 ```bash
-git clone https://github.com/devbydenis/fgo24-react-form.git
-cd fgo24-react-form
+git clone https://github.com/devbydenis/fgo24-react-redux.git
+cd fgo24-react-redux
 ```
 
 ### Installing Dependencies
@@ -66,7 +68,7 @@ The UI is fully responsive, leveraging Tailwind CSS to ensure seamless display a
 ## 📚 Project Structure
 
 ```
-fgo24-react-form/
+fgo24-react-redux/
 ├── public/                # Static assets
 ├── src/
 │   ├── assets/            # Images and media
@@ -107,7 +109,7 @@ Contributions are welcome! To contribute:
 
 Denis Rahmadi - [GitHub](https://github.com/devbydenis)
 
-Project Link: [https://github.com/devbydenis/fgo24-react-form](https://github.com/devbydenis/fgo24-react-form)
+Project Link: [https://github.com/devbydenis/fgo24-react-redux](https://github.com/devbydenis/fgo24-react-redux)
 
 ---
 
@@ -115,8 +117,8 @@ Made by Denis Rahmadi
 
 Citations:
 [1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/69746963/f7d84211-324f-4c30-990e-857903da42f3/format-readme.txt
-[2] https://github.com/devbydenis/fgo24-react-form.git.
+[2] https://github.com/devbydenis/fgo24-react-redux.git.
 [3] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/69746963/f7d84211-324f-4c30-990e-857903da42f3/format-readme.txt
-[4] https://github.com/devbydenis/fgo24-react-form.git.
+[4] https://github.com/devbydenis/fgo24-react-redux.git.
 
 ---
