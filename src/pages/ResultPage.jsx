@@ -1,12 +1,19 @@
 import React, { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+
 
 function ResultPage() {
   const [data, setData] = useState([])
-
+  const surveyList = useSelector((state) => state.surveyResult.data)
+  
   useEffect(() => {
-    setData(JSON.parse(localStorage.getItem("form")))
+    setData(surveyList)
   }, [])
+
+  // useEffect(() => {
+  //   setData(JSON.parse(localStorage.getItem("form")))
+  // }, [])
 
   console.log(data);
   return (

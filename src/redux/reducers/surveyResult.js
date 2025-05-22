@@ -3,15 +3,15 @@ import { createSlice } from "@reduxjs/toolkit";
 const surveyResult = createSlice({
   name: "surveyResult",
   initialState: {
-    surveyResult: [],
+    data: [],
   },
   reducers: {
     addData: (state, action) => {
-      const id = state.surveyResult.length + 1;
-      state.surveyResult.push({ id, ...action.payload });
+      const id = state.data.length + 1;
+      state.data.push({ id, ...action.payload });
     },
     removeData: (state, action) => {
-      state.surveyResult = state.surveyResult.filter(
+      state.data = state.data.filter(
         (item) => item.id !== action.payload
       );
     },
