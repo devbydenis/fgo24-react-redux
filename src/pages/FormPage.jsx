@@ -3,15 +3,17 @@ import ilustrationImage from "../assets/undraw_form.svg";
 import {MdCloudDone} from "react-icons/md";
 import Input from "../components/Input";
 import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
+import { addData } from "../redux/reducers/surveyResult";
 
 function FormPage() {
   const { register, handleSubmit } = useForm();
   const Navigate = useNavigate();
+  const dispatch = useDispatch();
+
   
   const onSubmit = (data) => {
-    const existingData = JSON.parse(localStorage.getItem("form")) || [];
-    
-    localStorage.setItem("form", JSON.stringify([...existingData, data]));
+    dispatch(addData(data));
     Navigate("/result");
   };
 

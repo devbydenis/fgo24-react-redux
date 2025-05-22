@@ -10,7 +10,7 @@ function Input({label, name, register, ...props}) {
           {props.required ? (
             <p className="flex gap-1">
               {label}
-              <p className="text-red-400">*</p>
+              <small className="text-red-400">*</small>
             </p>
           ) : (
             label
@@ -42,7 +42,7 @@ function Input({label, name, register, ...props}) {
           {props.required ? (
             <p className="flex gap-1">
               {label}
-              <p className="text-red-400">*</p>
+              <small className="text-red-400">*</small>
             </p>
           ) : (
             label
@@ -74,7 +74,7 @@ function Input({label, name, register, ...props}) {
         {props.required ? (
           <p className="flex gap-1">
             {label}
-            <p className="text-red-400">*</p>
+            <small className="text-red-400">*</small>
           </p>
         ) : (
           label
