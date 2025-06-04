@@ -1,4 +1,4 @@
-# FGO24 React Redux
+# React Form with Redux
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
@@ -8,6 +8,10 @@
 ## Description
 
 This project is a basic React application scaffolded with Vite, styled using Tailwind CSS, and powered by a Node.js environment. It is developed as part of the FGO24 (Full-stack Golang 2024) bootcamp to demonstrate redux in react works by building a google form clone
+
+## Preview
+
+![Preview](preview.png)
 
 ## ✨ Features
 
@@ -60,6 +64,21 @@ yarn dev
 ```
 
 The app will be available at `http://localhost:5173` by default.
+
+### Docker Deployment
+
+1. **Build the Docker image**
+   ```bash
+   docker build -t image-react-form .
+   ```
+
+2. **Run the container**
+   ```bash
+   docker run -d --name container-react-form -p 8080:80 image-react-form
+   ```
+
+3. **Access the application**
+   Open your browser and go to `http://localhost:8080`
 
 ## 📱 Responsive Design
 
